@@ -17,10 +17,20 @@ COMMAND_LIST = "HELP"
 #Message handlers
 @bot.message_handler(commands = ['start'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, "Welcome to our FIRENOTIFY BOT!")
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    item1 = types.KeyboardButton('get news')
+    item2 = types.KeyboardButton('get stats')
+    item3 = types.KeyboardButton('send location')
+    item4 = types.KeyboardButton('send time')
+    markup.add(item1, item2, item3, item4)
+    bot.send_message(message.chat.id, "Welcome to our FIRENOTIFY BOT!", reply_markup=markup)
+    
+    
+    
+    
 @bot.message_handler(commands=['help'])
 def send_help(message):
     bot.send_message(message.chat.id, COMMAND_LIST)
 
 
-bot.polling()
+bot.polling(non_stop=True)
