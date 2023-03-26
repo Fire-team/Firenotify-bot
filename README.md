@@ -1,1 +1,1 @@
-# Firenotify-bot
+# Firenotify bot
