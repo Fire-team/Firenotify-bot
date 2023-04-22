@@ -10,8 +10,6 @@ soup = BeautifulSoup(response.content, 'html.parser')
 
 title = soup.find('title').text
 tables = soup.find_all("table")
-
-
 table = None
 for t in tables:
     header_row = t.find("tr")
@@ -21,12 +19,8 @@ for t in tables:
         table = t
         break
 
-rows = table.find_all("tr")
-
-
+rows = table.find_all("r")
 print(title)
-
-
 data = []
 data_rows = rows[1:]
 for row in data_rows:
