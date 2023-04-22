@@ -19,7 +19,8 @@ for t in tables:
         table = t
         break
 
-rows = table.find_all("r")
+rows = table.find_all("tr")
+
 print(title)
 data = []
 data_rows = rows[1:]
