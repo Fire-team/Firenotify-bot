@@ -33,4 +33,3 @@ for row in data_rows:
 
 
 print(tabulate(data, headers=column_names, tablefmt="grid"))
-#Deneme
