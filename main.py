@@ -20,11 +20,10 @@ COMMAND_LIST = "HELP"
 def send_welcome(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton('get news')
-    item2 = types.KeyboardButton('get stats')
+    item2 = types.KeyboardButton('get graph')
     item3 = types.KeyboardButton('send location', request_location=True)
     item4 = types.KeyboardButton('send time')
-    item5 = types.KeyboardButton('get graph')
-    markup.add(item1, item2, item3, item4, item5)
+    markup.add(item1, item2, item3, item4)
     bot.send_message(message.chat.id, "Welcome to our FIRENOTIFY BOT!", reply_markup=markup)
 
 
