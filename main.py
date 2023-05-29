@@ -56,7 +56,7 @@ def send_stats(message):
 
 @bot.message_handler(commands=['help'])
 def send_help(message):
-    bot.send_message(message.chat.id, COMMAND_LIST)
+    bot.send_message(message.chat.id, "Contact us at 444-444-44 if something is happening near you")
 
 
 bot.polling(non_stop=True)
